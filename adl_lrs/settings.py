@@ -19,11 +19,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lrs',
-        'USER': 'root',
-        'PASSWORD': 'password',
+        'USER': 'andy',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '',
-    }    
+    }
 }
 
 # Local time zone for this installation. Choices can be found here:
@@ -150,7 +150,7 @@ CACHES = {
     'attachment_cache':{
         'BACKEND':'django.core.cache.backends.db.DatabaseCache',
         'LOCATION':'attachment_cache',
-        'TIMEOUT': 86400,        
+        'TIMEOUT': 86400,
     },
 }
 
@@ -162,7 +162,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'v+m%^r0x)$_x8i3trn*duc6vd-yju0kx2b#9lk0sn2k^7cgyp5'
+SECRET_KEY = 'GE^3d5d$DF^Gds4f0-3fy5kd;wx09(&*j)d39d#dkTFE3DtF4K'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -252,7 +252,7 @@ LOGGING = {
             'maxBytes': 1024*1024*5, # 5 MB
             'backupCount': 5,
             'formatter':'standard',
-        },  
+        },
         'request_handler': {
                 'level':'DEBUG',
                 'class':'logging.handlers.RotatingFileHandler',
@@ -268,7 +268,7 @@ LOGGING = {
             'maxBytes': 1024*1024*5, # 5 MB
             'backupCount': 5,
             'formatter':'standard',
-        },        
+        },
     },
     'loggers': {
         'lrs': {
@@ -285,6 +285,6 @@ LOGGING = {
             'handlers': ['celery_handler'],
             'level': 'DEBUG',
             'propagate': True
-        },   
+        },
     }
 }
