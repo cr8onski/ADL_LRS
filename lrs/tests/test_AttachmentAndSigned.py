@@ -19,7 +19,6 @@ from django.utils.timezone import utc
 from django.conf import settings
 
 from ..models import Statement, StatementAttachment
-from ..utils.jws import JWS
 
 from adl_lrs.views import register
 
